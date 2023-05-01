@@ -24,3 +24,90 @@ a {
     background: black;
   }
 }
+.autocomplete {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input:focus {
+  outline: none;
+  border-color: blue;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+li {
+  padding: 0.5rem;
+  color: black;
+  cursor: pointer;
+}
+
+li:hover,
+li[aria-selected='true'] {
+  background-color: #f2f2f2;
+}
+
+li[aria-selected='true'] {
+  font-weight: bold;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+textarea {
+  width: 30rem;
+  height: 3rem;
+  padding: 13px;
+  border-radius: 10px;
+  resize: vertical;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+/* Add some focus styles for the textarea */
+textarea:focus {
+  outline: none;
+  border-color: #999;
+}
+
+/* Optional: Add some space between the textarea and other elements */
+textarea + * {
+  margin-top: 20px;
+}
